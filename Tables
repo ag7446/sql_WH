@@ -14,14 +14,14 @@ Create table Products(
   Prod_name varchar
 );
 
-Create table Bye_Orders(
+Create table B_Orders(
   Prod_amu int,
   Inv_ID int PRIMARY KEY,
     
    FOREIGN KEY (Inv_ID) REFERENCES WH_inv(Inv_ID)
 );
 
-Create table Sell_Orders(
+Create table S_Orders(
   Amount int,
   Inv_ID int PRIMARY KEY,
 
