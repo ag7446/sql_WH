@@ -3,7 +3,7 @@ Create table WareHouse(
   War_name varchar 
 );
 
-Create table WareHouse(
+Create table ID_map(
  Inv_ID  int primary key,
  WH_ID   int,
  Prod_ID varchar 
