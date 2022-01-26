@@ -1,6 +1,12 @@
 Create table WareHouse(
-  War_ID   int primary key,
+  WH_ID   int primary key,
   War_name varchar 
+);
+
+Create table WareHouse(
+ Inv_ID  int primary key,
+ WH_ID   int,
+ Prod_ID varchar 
 );
 
 Create table Products(
@@ -9,39 +15,20 @@ Create table Products(
 );
 
 Create table Bye_Orders(
-  War_name varchar,
-  War_ID int,
-  Prod_ID   int,
   Prod_amu int,
   Inv_ID int PRIMARY KEY,
     
-   FOREIGN KEY (War_ID) REFERENCES WareHouse(War_ID)
-   FOREIGN KEY (War_name) REFERENCES WareHouse(War_name)
-   FOREIGN KEY (Prod_ID) REFERENCES Products(Prod_ID)
    FOREIGN KEY (Inv_ID) REFERENCES WH_inv(Inv_ID)
 );
 
 Create table Sell_Orders(
-  War_name varchar,
-  War_ID int,
-  Prod_ID   int,
   Amount int,
   Inv_ID int PRIMARY KEY,
 
-   FOREIGN KEY (War_ID) REFERENCES WareHouse(War_ID)
-   FOREIGN KEY (War_name) REFERENCES WareHouse(War_name)
-   FOREIGN KEY (Prod_ID) REFERENCES Products(Prod_ID)
    FOREIGN KEY (Inv_ID) REFERENCES WH_inv(Inv_ID)
 );
 
 Create table WH_inv(
   Inv_ID     int primary key,
-  War_ID   int,
-  War_name varchar (50),
-  Prod_ID   int (50),
-  Amount  Bigint,
-
-   FOREIGN KEY (War_ID) REFERENCES WareHouse(War_ID)
-   FOREIGN KEY (War_name) REFERENCES WareHouse(War_name)
-   FOREIGN KEY (Prod_ID) REFERENCES Products(Prod_ID)
+  Amount  Bigint
 );
