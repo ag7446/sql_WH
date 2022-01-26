@@ -19,12 +19,12 @@ INSERT INTO Products (Prod_ID, Prod_name) values
 ("P002", "JPlatta"),
 ("P003", "Päronklocka");
 
-INSERT INTO Bye_Orders (War_name, War_ID, Prod_ID, Prod_amu) values 
-("Cupertino", "1",  "P001", "45000"),
-("Cupertino", "1", "P002", "40000"),
-("Norrköping", "2", "P001", "50000"),
-("Frankurt", "3", "P001", "100000"),
-("Frankurt", "3", "P003", "20000");
+INSERT INTO Bye_Orders (War_name, War_ID, Prod_ID, Prod_amu, Inv_ID) values 
+("Cupertino", "1",  "P001", "45000", "1"),
+("Cupertino", "1", "P002", "40000", "2"),
+("Norrköping", "2", "P001", "50000", "5"),
+("Frankurt", "3", "P001", "100000", "7"),
+("Frankurt", "3", "P003", "20000", "9");
 
 INSERT INTO Sell_Orders (War_name, War_ID, Prod_ID, Amount) values 
 ("Cupertino", "1", "P002", "40000"),
