@@ -3,7 +3,7 @@ INSERT INTO WareHouse (WH_ID, War_name) values
 ("2", "Norrköping"),
 ("3", "Frankurt");
 
-INSERT INTO WH_inv (Inv_ID, War_ID, War_name, Prod_ID, Prod_inv) values 
+INSERT INTO WH_inv (Inv_ID, War_ID, War_name, Prod_ID, Amount) values 
 ("1", "1", "Cupertino", "P001", "12500"),
 ("2", "1", "Cupertino", "P002", "41500"),
 ("3", "1", "Cupertino", "P003", "90000"),
