@@ -16,3 +16,15 @@ Group BY war_id, prod_id;
 SELECT WH_inv.War_name, WH_inv.War_ID, Bye_Orders.prod_id, WH_inv.amount + Bye_Orders.Prod_amu From Bye_Orders
 Join WH_inv On WH_inv.Prod_ID = Bye_Orders.Prod_ID
 Group BY WH_inv.war_id, Bye_Orders.prod_id;
+
+__________________Updated DB_______________
+
+//summerar och subrtaherar alla in och utvärden för att se aktuellt lagerstatus
+
+SELECT WareHouse.War_name, WareHouse.WH_ID, COALESCE(WH_inv.amount, 0), COALESCE(B_Orders.Prod_amu, 0), COALESCE(S_Orders.Amount, 0) From ID_map
+left Join WareHouse On WareHouse.WH_ID = ID_map.WH_ID
+left JOIN WH_inv ON WH_inv.Inv_ID = ID_map.Inv_ID
+left Join B_Orders ON B_Orders.Inv_ID = ID_map.Inv_ID
+left join S_Orders ON S_Orders.Inv_ID = ID_map.Inv_ID;
+
+
