@@ -1,0 +1,45 @@
+Create table WareHouse(
+  War_ID   int primary key,
+  War_name varchar 
+);
+
+Create table Products(
+  Prod_ID   int primary key,
+  Prod_name varchar
+);
+
+Create table Bye_Orders(
+  B_Order_ID   int primary key,
+  War_name varchar,
+  War_ID int,
+  Prod_ID   int,
+  Prod_amu int,
+
+   FOREIGN KEY (War_ID) REFERENCES WareHouse(War_ID)
+   FOREIGN KEY (War_name) REFERENCES WareHouse(War_name)
+   FOREIGN KEY (Prod_ID) REFERENCES Products(Prod_ID)
+);
+
+Create table Sell_Orders(
+  S_Order_ID   int primary key,
+  War_name varchar,
+  War_ID int,
+  Prod_ID   int,
+  Amount int,
+
+   FOREIGN KEY (War_ID) REFERENCES WareHouse(War_ID)
+   FOREIGN KEY (War_name) REFERENCES WareHouse(War_name)
+   FOREIGN KEY (Prod_ID) REFERENCES Products(Prod_ID)
+);
+
+Create table WH_inv(
+  Inv_ID     int primary key,
+  War_ID   int,
+  War_name varchar (50),
+  Prod_ID   int (50),
+  Amount  Bigint,
+
+   FOREIGN KEY (War_ID) REFERENCES WareHouse(War_ID)
+   FOREIGN KEY (War_name) REFERENCES WareHouse(War_name)
+   FOREIGN KEY (Prod_ID) REFERENCES Products(Prod_ID)
+);
