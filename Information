@@ -40,4 +40,4 @@ INSERT INTO B_Orders (Prod_amu, Inv_ID) values
 INSERT INTO S_Orders (Amount, Inv_ID) values 
 ("40000", "2"),
 ("50000", "4"),
-("500", "6");
+("5000", "6");
