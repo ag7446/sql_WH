@@ -26,7 +26,7 @@ INSERT INTO Bye_Orders (War_name, War_ID, Prod_ID, Prod_amu, Inv_ID) values
 ("Frankurt", "3", "P001", "100000", "7"),
 ("Frankurt", "3", "P003", "20000", "9");
 
-INSERT INTO Sell_Orders (War_name, War_ID, Prod_ID, Amount) values 
-("Cupertino", "1", "P002", "40000"),
-("Norrköping", "2", "P001", "50000"),
-("Norrköping", "2", "P003", "500");
+INSERT INTO Sell_Orders (War_name, War_ID, Prod_ID, Amount, Inv_ID) values 
+("Cupertino", "1", "P002", "40000", "2"),
+("Norrköping", "2", "P001", "50000", "4"),
+("Norrköping", "2", "P003", "500", "6");
