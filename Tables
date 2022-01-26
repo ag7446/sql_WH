@@ -9,20 +9,17 @@ Create table Products(
 );
 
 Create table Bye_Orders(
-  B_Order_ID   int AUTO_INCREMENT,
   War_name varchar,
   War_ID int,
   Prod_ID   int,
   Prod_amu int,
     
-   PRIMARY KEY (B_ORDER_ID)
    FOREIGN KEY (War_ID) REFERENCES WareHouse(War_ID)
    FOREIGN KEY (War_name) REFERENCES WareHouse(War_name)
    FOREIGN KEY (Prod_ID) REFERENCES Products(Prod_ID)
 );
 
 Create table Sell_Orders(
-  S_Order_ID   int primary key,
   War_name varchar,
   War_ID int,
   Prod_ID   int,
