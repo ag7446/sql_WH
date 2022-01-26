@@ -27,4 +27,15 @@ left JOIN WH_inv ON WH_inv.Inv_ID = ID_map.Inv_ID
 left Join B_Orders ON B_Orders.Inv_ID = ID_map.Inv_ID
 left join S_Orders ON S_Orders.Inv_ID = ID_map.Inv_ID;
 
+-------------Future work--------------
+
+If Btn_buy pressed ( 
+
+INSERT INTO B_Orders (Prod_amu, Inv_ID) values
+(”User_value”, "user_picked_ID":
+
+);
+
+
+
 
