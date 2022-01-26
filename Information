@@ -4,15 +4,15 @@ INSERT INTO WareHouse (WH_ID, War_name) values
 ("3", "Frankurt");
 
 INSERT INTO WH_inv (Inv_ID, War_ID, War_name, Prod_ID, Amount) values 
-("1", "1", "Cupertino", "P001", "12500"),
-("2", "1", "Cupertino", "P002", "41500"),
+("1", "1", "Cupertino", "P001", "125000"),
+("2", "1", "Cupertino", "P002", "26500"),
 ("3", "1", "Cupertino", "P003", "90000"),
 ("4", "2", "Norrköping", "P001", "55000"),
 ("5", "2", "Norrköping", "P002", "104300"),
-("6", "2", "Norrköping", "P003", "38000"),
-("7", "3", "Frankurt", "P001", "101700"),
+("6", "2", "Norrköping", "P003", "43000"),
+("7", "3", "Frankurt", "P001", "1700"),
 ("8", "3", "Frankurt", "P002", "72400"),
-("9", "3", "Frankurt", "P003", "25000");
+("9", "3", "Frankurt", "P003", "5000");
 
 INSERT INTO Products (Prod_ID, Prod_name) values
 ("P001", "JTelefon"),
