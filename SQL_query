@@ -1,0 +1,18 @@
+//summerar alla köporder efter prod ID 
+
+SELECT Bye_Orders.prod_id, SUM(Bye_Orders.Prod_amu) From Bye_Orders
+Group BY prod_id;
+
+
+// superar alla köporder efter både wh och prodID
+
+SELECT Bye_Orders.War_ID, Bye_Orders.prod_id, SUM(Bye_Orders.Prod_amu) From Bye_Orders
+Group BY war_id, prod_id;
+
+
+
+// Summerar alla produkter + köp ordrarna efter prod och WH
+
+SELECT WH_inv.War_name, WH_inv.War_ID, Bye_Orders.prod_id, WH_inv.amount + Bye_Orders.Prod_amu From Bye_Orders
+Join WH_inv On WH_inv.Prod_ID = Bye_Orders.Prod_ID
+Group BY WH_inv.war_id, Bye_Orders.prod_id;
