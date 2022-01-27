@@ -27,6 +27,14 @@ left JOIN WH_inv ON WH_inv.Inv_ID = ID_map.Inv_ID
 left Join B_Orders ON B_Orders.Inv_ID = ID_map.Inv_ID
 left join S_Orders ON S_Orders.Inv_ID = ID_map.Inv_ID;
 
+// Överblickar olika databasdelar 
+
+SELECT WareHouse.War_name, WareHouse.WH_ID,ID_map.Prod_ID, COALESCE(B_Orders.Prod_amu, 0), COALESCE(S_Orders.Amount, 0) From ID_map
+left Join WareHouse On WareHouse.WH_ID = ID_map.WH_ID
+left JOIN WH_inv ON WH_inv.Inv_ID = ID_map.Inv_ID
+left Join B_Orders ON B_Orders.Inv_ID = ID_map.Inv_ID
+left join S_Orders ON S_Orders.Inv_ID = ID_map.Inv_ID;
+
 -------------Future work--------------
 
 If Btn_buy pressed ( 
